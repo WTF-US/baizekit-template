@@ -1,0 +1,5 @@
+[template]
+name = "service-trait-template"
+
+[placeholders]
+entity = { prompt = "实体名（如 Account）", type = "string" }
