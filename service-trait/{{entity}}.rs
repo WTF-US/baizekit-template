@@ -8,7 +8,8 @@ use uuid::Uuid;
 use crate::error::Result;
 
 #[derive(Debug, Deserialize, Serialize, ToSchema)]
-pub struct {{entity}}DTO {
+pub struct {{entity | pascal_case}}DTO {
+    pub id: Uuid,
     /// 创建时间
     pub created_at: DateTime<Utc>,
     /// 更新时间
@@ -36,10 +37,19 @@ impl Default for SearchCommand {
 pub struct AddCommand {
 }
 
-#[async_trait::async_trait]
-pub trait InstrumentService {
-    async fn query(&self, cmd: QueryCommand) -> Result<{{entity}}DTO>;
-    async fn search(&self, cmd: SearchCommand) -> Result<Page<{{entity}}DTO>>;
+#[derive(Clone, Debug, Deserialize, Serialize, ToSchema)]
+pub struct UpdateCommand {
+    #[serde(skip)]
+    pub id: Uuid,
+}
 
-    async fn add(&self, cmd: AddCommand) -> Result<{{entity}}DTO>;
+#[async_trait::async_trait]
+pub trait {{entity | pascal_case}}Service {
+    async fn query(&self, cmd: QueryCommand) -> Result<{{entity | pascal_case}}DTO>;
+
+    async fn search(&self, cmd: SearchCommand) -> Result<Page<{{entity | pascal_case}}DTO>>;
+
+    async fn add(&self, cmd: AddCommand) -> Result<{{entity | pascal_case}}DTO>;
+
+    async fn update(&self, cmd: UpdateCommand) -> Result<{{entity | pascal_case}}DTO>;
 }
