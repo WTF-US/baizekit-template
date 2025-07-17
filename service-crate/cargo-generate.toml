@@ -3,6 +3,5 @@ name = "service-crate-template"
 description = "生成 core、sdk 包"
 
 [placeholders]
-service = { prompt = "服务名(如: account)", type = "string" }
-entity = { prompt = "实体名(如: Account)", type = "string" }
-db_prefix = { prompt = "数据库表前缀(如: acc)", type = "string" }
+entity = { prompt = "实体名", type = "string", default = 'account' }
+db_prefix = { prompt = "数据库表前缀", type = "string", default = "acc" }

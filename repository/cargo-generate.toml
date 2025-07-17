@@ -2,6 +2,5 @@
 name = "repository"
 
 [placeholders]
-service = { prompt = "服务名", type = "string", default = "account" }
 entity = { prompt = "实体名", type = "string", default = "account" }
 db_prefix = { prompt = "数据库表前缀", type = "string", default = "acc" }

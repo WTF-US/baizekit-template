@@ -2,7 +2,7 @@ use std::sync::Arc;
 
 use baizekit_derive::Curd;
 use baizekit_seaorm::curd::*;
-use {{service}}_sdk::error::{Error, Result};
+use {{project-name | snake_case}}_sdk::error::{Error, Result};
 use sea_orm::*;
 use sea_orm::sea_query::OnConflict;
 

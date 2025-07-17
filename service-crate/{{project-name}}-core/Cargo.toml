@@ -1,12 +1,12 @@
 [package]
-name = "{{service}}-core"
+name = "{{project-name}}-core"
 authors = ["{{authors}}"]
 version.workspace = true
 edition.workspace = true
 
 
 [dependencies]
-{{service}}-sdk = { path = "../{{service}}-sdk" }
+{{project-name}}-sdk = { path = "../{{project-name}}-sdk" }
 async-trait = { workspace = true }
 baizekit-derive = { workspace = true }
 baizekit-seaorm = { workspace = true }

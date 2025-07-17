@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use {{service}}_sdk::service::{{entity}}::{{entity | pascal_case}}Service;
+use {{project-name | snake_case}}_sdk::service::{{entity}}::{{entity | pascal_case}}Service;
 
 #[derive(Clone)]
 pub struct AppState {

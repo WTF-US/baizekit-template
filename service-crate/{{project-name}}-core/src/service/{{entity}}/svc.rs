@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use {{service}}_sdk::service::{{entity}}::*;
-use {{service}}_sdk::error::Result;
+use {{project-name | snake_case}}_sdk::service::{{entity}}::*;
+use {{project-name | snake_case}}_sdk::error::Result;
 
 use crate::domain::{{entity}}::*;
 
