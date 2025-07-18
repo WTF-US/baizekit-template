@@ -1,5 +1,0 @@
-[template]
-name = "service-trait-template"
-
-[placeholders]
-entity = { prompt = "实体名", type = "string", default = "account" }

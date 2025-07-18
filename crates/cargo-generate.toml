@@ -1,0 +1,5 @@
+[template]
+name = "service-crate-template"
+description = "生成 core、sdk 包"
+
+[placeholders]
