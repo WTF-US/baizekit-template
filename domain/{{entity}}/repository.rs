@@ -1,9 +1,7 @@
-use std::sync::Arc;
-
 use uuid::Uuid;
 use baizekit_derive::{PaginatedFilter, With};
 use baizekit_seaorm::curd::*;
-use {{project-name | snake_case}}_sdk::error::{Error, Result};
+use {{project-name | snake_case}}_sdk::error::Error;
 
 use super::{{entity | pascal_case}};
 
