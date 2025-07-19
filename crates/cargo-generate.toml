@@ -1,5 +1,10 @@
 [template]
-name = "service-crate-template"
-description = "生成 core、sdk 包"
+name = "crates"
 
 [placeholders]
+
+
+[baize]
+name = "crates"
+destination = "crates"
+init = false

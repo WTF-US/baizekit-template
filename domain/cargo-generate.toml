@@ -1,5 +1,11 @@
 [template]
-name = "service-trait-impl"
+name = "domain"
 
 [placeholders]
 entity = { prompt = "实体名", type = "string", default = "account" }
+
+
+[baize]
+name = "domain"
+destination = "src/domain/"
+init = true

@@ -1,6 +1,12 @@
 [template]
-name = "db-repository-template"
+name = "db"
 
 [placeholders]
 entity = { prompt = "实体名", type = "string", default = "account" }
 db_prefix = { prompt = "数据库表前缀", type = "string", default = "acc" }
+
+
+[baize]
+name = "db"
+destination = "src/_db/"
+init = true
